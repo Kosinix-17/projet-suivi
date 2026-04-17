@@ -1,10 +1,97 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <title>Inscription</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Projet de Suivi</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
-    <h1>Inscription</h1>
-    <p>Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): 2026-04-17 16:05:43</p>
-    <p>Current User's Login: Kosinix-17</p>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Projet de Suivi</h1>
+            </div>
+            <nav class="nav-main">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="apropos.html">À Propos</a></li>
+                    <li><a href="cours.html">Cours & Formations</a></li>
+                    <li><a href="equipe.html">Équipe</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="inscription.html" class="active">Inscription</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="hero">
+                <h2>Créer un Compte</h2>
+                <p>Rejoignez notre communauté et accédez à tous nos services</p>
+            </section>
+
+            <section class="content-section">
+                <h3>Formulaire d'Inscription</h3>
+                
+                <form class="inscription-form" method="POST" action="#">
+                    <div class="form-group">
+                        <label for="firstname">Prénom</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname">Nom</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Adresse Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm_password">Confirmer le mot de passe</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Téléphone (optionnel)</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">J'accepte les conditions d'utilisation</label>
+                    </div>
+
+                    <button type="submit" class="download-button">S'inscrire</button>
+                </form>
+
+                <p class="login-link">Vous avez déjà un compte ? <a href="connexion.html">Se connecter</a></p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav-footer">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="apropos.html">À Propos</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2026 Projet de Suivi EFREI. Tous droits réservés.</p>
+        </div>
+    </footer>
 </body>
 </html>
