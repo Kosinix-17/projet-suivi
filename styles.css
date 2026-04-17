@@ -1,0 +1,701 @@
+:root {
+    --primary-color: #0A316C ;
+    --secondary-color: #ff9800;
+    --text-color: #333;
+    --bg-color: #f5f5f5;
+    --border-color: #ddd;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #003570 100%);
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.nav-main ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-main a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-bottom: 3px solid transparent;
+    transition: var(--transition);
+}
+
+.nav-main a:hover,
+.nav-main a.active {
+    border-bottom-color: var(--secondary-color);
+}
+
+.main-content {
+    flex: 1;
+    padding: 60px 0;
+    min-height: calc(100vh - 200px);
+}
+
+.main-content h2 {
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 15px;
+}
+
+.main-content h3 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.main-content ul {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.main-content li {
+    margin-bottom: 10px;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0066cc 100%);
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 60px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    border: none;
+    padding-bottom: 0;
+    color: white;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.content-section {
+    background: white;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.content-section:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.content-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card h4 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-footer ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-footer a {
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-footer a:hover {
+    color: var(--secondary-color);
+}
+
+.footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-main ul {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .nav-main a {
+        display: block;
+        padding: 10px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .content-section {
+        padding: 25px;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-main ul {
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .main-content h2 {
+        font-size: 28px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== CAROUSEL ===== */
+.carousel-section {
+    margin-bottom: 60px;
+}
+
+.carousel {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-item.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Boutons de navigation */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.prev {
+    left: 0;
+}
+
+.carousel-control.next {
+    right: 0;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: var(--secondary-color);
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 300px;
+    }
+
+    .carousel-control {
+        padding: 12px 16px;
+        font-size: 20px;
+    }
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;      /* ← Remplacez "cover" par "contain" */
+    object-position: center;
+    display: block;
+}
+
+.game-of-the-year {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8f4f8 100%);
+    padding: 60px 0;
+    margin: 60px 0;
+    border-radius: 8px;
+}
+
+.game-of-the-year h3 {
+    text-align: center;
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+    align-items: start;
+}
+
+.game-description {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-description h4 {
+    color: var(--primary-color);
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.game-description p {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.game-description ul {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+.game-description li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #666;
+}
+
+.game-description li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.game-gallery {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-gallery h4 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    border-color: var(--secondary-color);
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+}
+
+/* Section téléchargement */
+.download-section {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-section h4 {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.download-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #e68900 100%);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+    cursor: pointer;
+    border: none;
+}
+
+.download-button:hover {
+    background: linear-gradient(135deg, #e68900 0%, #d47c00 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 152, 0, 0.4);
+}
+
+.download-button:active {
+    transform: translateY(0);
+}
+
+.file-info {
+    color: #999;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .game-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .game-of-the-year h3 {
+        font-size: 24px;
+    }
+
+    .download-section {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-description,
+    .game-gallery,
+    .download-section {
+        padding: 20px;
+    }
+
+    .download-button {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
+
+/* ===== SECTION COURS ET FORMATIONS ===== */
+.courses-section {
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+}
+
+.courses-section h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.courses-section > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+/* Grille de cours */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Carte de cours */
+.course-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--secondary-color);
+    position: relative;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-left-color: var(--primary-color);
+}
+
+/* Icône du cours */
+.course-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.course-card h4 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Liste des cours */
+.course-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.course-card li {
+    color: #555;
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.6;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.course-card li:last-child {
+    border-bottom: none;
+}
+
+.course-card li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.course-card li:hover {
+    color: var(--primary-color);
+    padding-left: 25px;
+    transition: all 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .course-card {
+        padding: 20px;
+    }
+
+    .course-icon {
+        font-size: 32px;
+    }
+
+    .course-card h4 {
+        font-size: 18px;
+    }
+
+    .course-card li {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-card {
+        padding: 15px;
+    }
+
+    .course-icon {
+        font-size: 28px;
+    }
+
+    .course-card h4 {
+        font-size: 16px;
+    }
+}

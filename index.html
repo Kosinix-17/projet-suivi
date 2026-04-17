@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Projet de Suivi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type= "text/javascript" src= "script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Projet de Suivi</h1>
+            </div>
+            <nav class="nav-main">
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="pages/apropos.html">À Propos</a></li>
+                    <li><a href="pages/cours.html">Cours & Formations</a></li>
+                    <li><a href="pages/equipe.html">Équipe</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="hero">
+                <h2>Bienvenue sur le site non-officiel (pas encore) de l'EFREI !</h2>
+                <p>Découvrez notre projet de suivi. L'objectif est clair ! Représenter au mieux les ressources de l'EFREI. Rendre lisible et accessible les outils pour faire
+                gagner du temps à nos élèves adorés !</p>
+            </section>
+
+            <section class="carousel-section">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/photo1.png" alt="Photo 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/photo2.png" alt="Photo 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/photo3.png" alt="Photo 3">
+                        </div>
+                    </div>
+
+                    <button class="carousel-control prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="carousel-control next" onclick="changeSlide(1)">❯</button>
+
+                    <div class="carousel-indicators">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>À propos du Département d'Informatique de l'EFREI</h3>
+                <p>
+                    Aujourd'hui constitué de moi-même ! Evan LEON. Elève et empereur de l'Efrei depuis plus de 1 ans ! Je souhaite mettre à disposition ma non
+                    expertise pour me la forger sur ce projet. Alors attendez-vous à du lourd !!
+                </p>
+            </section>
+
+            <section class="game-of-the-year">
+                <div class="container">
+                    <h3>🏆 Meilleur Jeu de l'Année</h3>
+
+                    <div class="game-content">
+                        <!-- Description du jeu -->
+                        <div class="game-description">
+                            <h4>Kingdom Defender</h4>
+                            <p>
+                                Kingdom Defender est un jeu de stratégie captivant où vous devez
+                                protéger votre royaume contre des vagues d'ennemis toujours plus fortes.
+                                Construisez et améliorez vos tours, gérez vos ressources avec sagesse
+                                et mettez en place des stratégies gagnantes pour remporter la victoire.
+                            </p>
+                            <p>
+                                <strong>Caractéristiques principales :</strong>
+                            </p>
+                            <ul>
+                                <li> Gameplay addictif et progressif</li>
+                                <li> Plusieurs tours uniques avec pouvoirs spéciaux</li>
+                                <li> Vagues d'ennemis de difficulté croissante</li>
+                                <li> Système de ressources et d'améliorations</li>
+                                <li> Graphismes colorés et immersifs</li>
+                                <li> Creer par une pro gameur tout à fait spécial ...</li>
+                            </ul>
+                        </div>
+
+                        <div class="game-gallery">
+                            <h4>Galerie de Jeu</h4>
+                            <div class="gallery-grid">
+                                <img src="images/photo4.png" alt="Screenshot Gameplay 1" class="gallery-img">
+                                <img src="images/photo5.png" alt="Screenshot Gameplay 2" class="gallery-img">
+                                <img src="images/Photo6.png" alt="Screenshot Gameplay 3" class="gallery-img">
+                                <img src="images/Photo7.png" alt="Screenshot Menu" class="gallery-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="download-section">
+                        <h4>Télécharger le Jeu</h4>
+                        <a href="downloads/Kingdom_Defender.zip" class="download-button" download>
+                            Télécharger Kingdom Defender (ZIP)
+                        </a>
+                        <p class="file-info">Taille du fichier : ~45 MB | Format : ZIP</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Sections Principales</h3>
+                <div class="cards">
+                    <div class="card">
+                        <h4>Cours et Formations</h4>
+                        <p>Consultez les cours et formations proposés par nos enseignants.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Notre Équipe</h4>
+                        <p>Evan LEON : Meilleur espoir de la génération 2006. Paresseux mais volontaire !</p>
+                    </div>
+                    <div class="card">
+                        <h4>Nous Contacter</h4>
+                        <p>Vous avez des questions ? Contactez-nous!
+                            LEON : evan.leon@efrei.fr</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav-footer">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="pages/apropos.html">À Propos</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2026 Projet de Suivi EFREI. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
