@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cours & Formations - Projet de Suivi</title>
     <link rel="stylesheet" href="../styles.css">
+    <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
 <body>
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>Projet de Suivi</h1>
+                <a href="../index.html">
+                    <img src="../images/logoefrei.png" alt="EFREI Logo" class="logo-img">
+                </a>
             </div>
             <nav class="nav-main">
                 <ul>
@@ -20,6 +23,7 @@
                     <li><a href="cours.html" class="active">Cours & Formations</a></li>
                     <li><a href="equipe.html">Équipe</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,80 +38,149 @@
             </section>
 
             <section class="content-section courses-section">
-                <h3> Tous nos Cours & Formations</h3>
+                <h3>Tous nos Cours & Formations</h3>
                 <p>Découvrez les différentes disciplines enseignées dans notre département informatique de l'EFREI :</p>
 
-                <div class="courses-grid">
-                    <!-- Mathématiques -->
-                    <div class="course-card">
-                        <div class="course-icon"></div>
-                        <h4>Mathématiques</h4>
-                        <ul>
-                            <li>Algèbre Linéaire</li>
+                <div class="courses-grid-3">
+
+                    <div class="course-card-v2">
+                        <div class="course-card-header math">
+                            <h4>Mathématiques</h4>
+                            <span class="course-count">7 matières</span>
+                        </div>
+                        <ul class="course-card-list">
+                            <li>Analyse</li>
+                            <li>Algèbre Générale</li>
+                            <li>Probabilités</li>
+                            <li>Fonctions de plusieurs variables</li>
+                            <li>Modélisation Mathématique</li>
+                            <li>Automates Finis et Expressions Rationnelles</li>
+                            <li>Analyse de Données</li>
                         </ul>
                     </div>
 
-                    <!-- Physique -->
-                    <div class="course-card">
-                        <div class="course-icon"></div>
-                        <h4>Physique</h4>
-                        <ul>
-                            <li>Mécanique Classique</li>
+                    <div class="course-card-v2">
+                        <div class="course-card-header physique">
+                            <h4>Physique</h4>
+                            <span class="course-count">10 matières</span>
+                        </div>
+                        <ul class="course-card-list">
+                            <li>Électricité Générale</li>
+                            <li>Physique Générale</li>
+                            <li>Atome à la Puce</li>
+                            <li>Système à la Fonction</li>
+                            <li>Information Numérique</li>
+                            <li>Champs Électromagnétiques</li>
+                            <li>Physique Moderne</li>
+                            <li>Systèmes Numériques</li>
+                            <li>Thermodynamique</li>
+                            <li>Canaux de Transmission et Propagation Électromagnétique</li>
                         </ul>
                     </div>
 
-                    <!-- Informatique -->
-                    <div class="course-card">
-                        <div class="course-icon"></div>
-                        <h4>Informatique</h4>
-                        <ul>
-                            <li>Programmation (C, Java, Python)</li>
+                    <div class="course-card-v2">
+                        <div class="course-card-header info">
+                            <h4>Informatique & Électronique</h4>
+                            <span class="course-count">9 matières</span>
+                        </div>
+                        <ul class="course-card-list">
+                            <li>Programmation Python</li>
+                            <li>Algorithmique</li>
+                            <li>Structure de Données et Programmation</li>
+                            <li>Complexité</li>
+                            <li>Réseau</li>
+                            <li>Système Linux</li>
+                            <li>Programmation Web</li>
+                            <li>Java</li>
+                            <li>Base de Données</li>
                         </ul>
                     </div>
 
-                    <!-- Électronique -->
-                    <div class="course-card">
-                        <div class="course-icon"></div>
-                        <h4>Électronique</h4>
-                        <ul>
-                            <li>Circuits Électriques</li>
-                        </ul>
-                    </div>
-
-                    <!-- Langues -->
-                    <div class="course-card">
-                        <div class="course-icon"></div>
-                        <h4>Langues</h4>
-                        <ul>
-                            <li>Anglais Technique</li>
-                        </ul>
-                    </div>
-
-                    <!-- Économie & Gestion -->
-                    <div class="course-card">
-                        <div class="course-icon"></div>
-                        <h4>Économie & Gestion</h4>
-                        <ul>
-                            <li>Économie d'Entreprise</li>
-                        </ul>
-                    </div>
                 </div>
             </section>
 
             <section class="content-section">
-                <h3> Informations sur nos Formations</h3>
-                <div class="cards">
+                <h3>Programme par Semestre</h3>
+                <p style="color:#666; margin-bottom:25px;">Répartition des modules sur les 2 années de classe préparatoire intégrée.</p>
+                <div class="table-wrapper">
+                    <table class="formations-table">
+                        <thead>
+                            <tr>
+                                <th scope="col" rowspan="2">Matière</th>
+                                <th scope="colgroup" colspan="2">Année 1</th>
+                                <th scope="colgroup" colspan="2">Année 2</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">Semestre 1</th>
+                                <th scope="col">Semestre 2</th>
+                                <th scope="col">Semestre 3</th>
+                                <th scope="col">Semestre 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="matiere-label math-label">Mathématiques</td>
+                                <td>Analyse 1<br>Algèbre 1</td>
+                                <td>Analyse 2<br>Algèbre Général 2</td>
+                                <td>Fonctions de plusieurs variables<br>Probabilités</td>
+                                <td>Modélisation Mathématique<br>Automates et Expressions Rationnelles<br>Analyse de Données</td>
+                            </tr>
+                            <tr>
+                                <td class="matiere-label physique-label">Physique</td>
+                                <td>Électricité Générale<br>Physique Générale</td>
+                                <td>Atome à la Puce<br>Système à la Fonction<br>Information Numérique</td>
+                                <td>Champs Électromagnétiques<br>Physique Moderne<br>Systèmes Numériques</td>
+                                <td>Propagation Électromagnétique<br>Thermodynamique<br>Canaux de Transmission</td>
+                            </tr>
+                            <tr>
+                                <td class="matiere-label info-label">Informatique &amp; Électronique</td>
+                                <td>Programmation Python<br>Algorithmique</td>
+                                <td>Structure de Données et Programmation<br>Complexité</td>
+                                <td>Structure de Données et Programmation 2<br>Réseau<br>Introduction à Linux</td>
+                                <td>Programmation Web<br>Java<br>Base de Données</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Informations sur nos Formations</h3>
+                <div class="cards-2x2">
                     <div class="card">
                         <h4>Durée des Études</h4>
-                        <p>Nos programmes sont conçus pour une formation complète de 5 ans, offrant une base solide en informatique et disciplines connexes.</p>
+                        <p><strong>5 ans</strong> de formation au total :</p>
+                        <ul>
+                            <li><strong>2 ans</strong> de classe préparatoire intégrée — bases scientifiques solides en maths, physique et informatique</li>
+                            <li><strong>3 ans</strong> d'école d'ingénieurs — spécialisation progressive dans votre filière</li>
+                        </ul>
                     </div>
                     <div class="card">
-                        <h4>Projets Pratiques</h4>
-                        <p>Chaque cours inclut des projets concrets et des travaux de laboratoire pour renforcer vos compétences pratiques.</p>
+                        <h4>International & TOEIC</h4>
+                        <p>La formation inclut une <strong>ouverture internationale</strong> obligatoire :</p>
+                        <ul>
+                            <li>Passage du <strong>TOEIC</strong> — certification d'anglais reconnue par les entreprises</li>
+                            <li>Semestre ou année d'études dans une <strong>université partenaire à l'étranger</strong></li>
+                            <li>Expérience internationale fortement valorisée dans le cursus</li>
+                        </ul>
                     </div>
                     <div class="card">
-                        <h4>Certifications</h4>
-                        <p>Obtenez des certifications reconnues dans l'industrie tout au long de votre parcours académique.</p>
+                        <h4>Projets & Pratique</h4>
+                        <p>Les projets sont au c&#339;ur de la formation :</p>
+                        <ul>
+                            <li>Projets pratiques dans <strong>quasiment toutes les matières</strong></li>
+                            <li>Travaux en équipe reproduisant les conditions professionnelles</li>
+                            <li>Projets de fin d'études valorisés par les entreprises partenaires</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Stages</h4>
+                        <p>Un parcours de stages progressif sur 5 ans :</p>
+                        <ul>
+                            <li><strong>1ère année</strong> — Stage ouvrier : découverte du monde du travail</li>
+                            <li><strong>2ème année</strong> — Stage en vente : développement des compétences commerciales</li>
+                            <li><strong>3 ans d'école ingénieurs</strong> — Stages dans les domaines de spécialisation choisis</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -124,6 +197,7 @@
                     <li><a href="cours.html">Cours & Formations</a></li>
                     <li><a href="equipe.html">Équipe</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
                 </ul>
             </nav>
             <p>&copy; 2026 Projet de Suivi EFREI. Tous droits réservés.</p>

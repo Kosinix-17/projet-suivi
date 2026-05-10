@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À Propos - Projet de Suivi</title>
+    <title>À Propos - Département Informatique EFREI</title>
     <link rel="stylesheet" href="../styles.css">
+    <script type="text/javascript" src="../script.js" defer></script>
 </head>
-
 
 <body>
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>Projet de Suivi</h1>
+                <a href="../index.html">
+                    <img src="../images/logoefrei.png" alt="EFREI Logo" class="logo-img">
+                </a>
             </div>
             <nav class="nav-main">
                 <ul>
                     <li><a href="../index.html">Accueil</a></li>
                     <li><a href="apropos.html" class="active">À Propos</a></li>
-                    <li><a href="cours.html">Cours & Formations</a></li>
+                    <li><a href="cours.html">Cours &amp; Formations</a></li>
                     <li><a href="equipe.html">Équipe</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,48 +31,220 @@
 
     <main class="main-content">
         <div class="container">
-            <h2>À Propos de Nous</h2>
 
+            <!-- HERO -->
+            <section class="hero">
+                <h2>On n'est pas là pour passer. On est là pour marquer.</h2>
+                <p>Département Informatique de l'EFREI - Villejuif. Des codeurs, des gamers, des sportifs, des bâtisseurs.</p>
+            </section>
+
+            <!-- CAMPUS BANNER -->
+            <section class="campus-banner">
+                <img src="../images/campus-efrei.jpg.png" alt="Campus EFREI Villejuif" class="campus-img">
+                <div class="campus-overlay">
+                    <span class="campus-tag">Notre Campus</span>
+                    <h3>EFREI — Villejuif</h3>
+                    <p>Un campus moderne au coeur de la région parisienne, conçu pour former les ingénieurs de demain.</p>
+                </div>
+            </section>
+
+            <!-- MANIFESTE -->
+            <section class="content-section manifeste-section">
+                <div class="manifeste-inner">
+                    <p class="manifeste-label">Notre Manifeste</p>
+                    <h3 class="manifeste-title">On ne fait pas que des études. On construit des trucs qui claquent.</h3>
+                    <p class="manifeste-body">
+                        Ici, le code n'est pas une punition, c'est une arme. On débogue à 3h du matin
+                        pas parce qu'on est obligés, mais parce qu'on veut que le projet soit parfait.
+                        On livre des projets, on gagne des hackathons, on bat des records, on rate, on recommence,
+                        et on s'améliore à chaque itération.
+                    </p>
+                    <p class="manifeste-body">
+                        Le département informatique de l'EFREI, c'est 5 ans pour devenir ingénieur,
+                        mais surtout une culture : la curiosité, l'audace, et l'envie de créer quelque
+                        chose dont on est fiers. Pas juste décrocher un diplôme.
+                    </p>
+                    <div class="manifeste-stats">
+                        <div class="manifeste-stat">
+                            <span class="manifeste-stat-num">5</span>
+                            <span class="manifeste-stat-lbl">ans de formation</span>
+                        </div>
+                        <div class="manifeste-stat">
+                            <span class="manifeste-stat-num">100%</span>
+                            <span class="manifeste-stat-lbl">projets concrets</span>
+                        </div>
+                        <div class="manifeste-stat">
+                            <span class="manifeste-stat-num">0</span>
+                            <span class="manifeste-stat-lbl">excuse acceptée</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JEUX VIDEO -->
             <section class="content-section">
-                <h3>Notre Projet</h3>
+                <h3>Gaming &amp; Projets - Le Code, C'est Notre Terrain</h3>
+                <p>On code le jour, on game la nuit. Et parfois, les deux en même temps.</p>
+
+                <div class="gaming-layout">
+                    <div class="gaming-card-main">
+                        <div class="gaming-card-header">
+                            <span class="gaming-badge">Projet étudiant</span>
+                            <h4>Kingdom Defender</h4>
+                            <p class="gaming-subtitle">Un jeu de tower-defense complet, sorti de notre imagination et de nos nuits blanches.</p>
+                        </div>
+                        <div class="gaming-card-body">
+                            <p>
+                                Conçu de A à Z par des étudiants du département, Kingdom Defender est la preuve
+                                qu'on ne se limite pas aux TPs. Un moteur de jeu, de l'IA ennemie, des niveaux
+                                générés, des assets custom - tout fait maison.
+                            </p>
+                            <ul class="gaming-features">
+                                <li>Moteur de jeu développé en C++</li>
+                                <li>Intelligence artificielle des ennemis</li>
+                                <li>Système de niveaux progressifs</li>
+                                <li>Assets graphiques originaux</li>
+                                <li>Multijoueur local</li>
+                            </ul>
+                            <a href="https://github.com/JeanChipo/Kingdom_Defender" target="_blank" rel="noopener" class="download-button gaming-btn">
+                                Voir le projet sur GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="gaming-aside">
+                        <div class="gaming-culture-card">
+                            <h4>La Culture Gaming</h4>
+                            <p>Chez nous, jouer aux jeux vidéo ce n'est pas perdre son temps - c'est comprendre ce que signifie une bonne expérience utilisateur, une IA bien calibrée, un level design qui tient la route.</p>
+                            <p>Les meilleurs ingénieurs logiciels sont souvent de grands gamers. Ce n'est pas un hasard.</p>
+                        </div>
+                        <div class="gaming-culture-card gaming-culture-alt">
+                            <h4>Hackathons &amp; Compétitions</h4>
+                            <p>On participe à des hackathons nationaux et internationaux. 24h pour coder une solution, la défendre, et la rendre viable. Un sport de combat, version numérique.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SPORT -->
+            <section class="content-section">
+                <h3>Sport -Le Corps Tient le Code</h3>
+                <p>Un bon développeur sait aussi s'arrêter de coder et aller transpirer.</p>
+
+                <div class="sport-photo-grid-3">
+                    <div class="sport-photo-card">
+                        <img src="../images/salle-sport.jpg.png" alt="Salle de sport EFREI" class="sport-photo-img-lg">
+                        <div class="sport-photo-body">
+                            <h4>Fitness &amp; Cardio</h4>
+                            <p>Une salle de sport équipée directement sur le campus. Vélos, tapis, musculation — de quoi décompresser entre deux sessions de code.</p>
+                        </div>
+                    </div>
+                    <div class="sport-photo-card">
+                        <img src="../images/efrei-volley.jpg.png" alt="EFREI Volley" class="sport-photo-img-lg">
+                        <div class="sport-photo-body">
+                            <h4>EFREI Volley</h4>
+                            <p>L'association sportive Volley de l'EFREI participe à des compétitions inter-écoles. Entraînements réguliers, ambiance de feu, inscriptions ouvertes.</p>
+                        </div>
+                    </div>
+                    <div class="sport-photo-card">
+                        <img src="../images/esport-efrei.jpg.jpg" alt="EFREI eSport" class="sport-photo-img-lg">
+                        <div class="sport-photo-body">
+                            <h4>EFREI eSport</h4>
+                            <p>Équipes sur Valorant, League of Legends, FIFA. Réflexes, stratégie, travail d'équipe — l'esport, c'est du sport.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <blockquote class="sport-quote">
+                    "Un corps qui bouge, c'est un esprit qui performe. Les meilleurs projets sortent de têtes reposées et de corps actifs."
+                </blockquote>
+            </section>
+
+            <!-- ASSOCIATIONS -->
+            <section class="content-section">
+                <h3>Associations - Plus Qu'une École, Une Communauté</h3>
+                <p>Ce qui se passe en dehors des cours compte autant que ce qui se passe dedans.</p>
+
+                <!-- Cybernight — carte photo mise en avant -->
+                <div class="cybernight-card">
+                    <img src="../images/cybernight.jpg.png" alt="Cybernight 2023" class="cybernight-img">
+                    <div class="cybernight-overlay">
+                        <span class="asso-tag">Événement</span>
+                        <h4>Cybernight — 5e Édition</h4>
+                        <p>Une nuit entière dédiée à la cybersécurité, aux défis techniques et au networking. L'événement incontournable du département.</p>
+                    </div>
+                </div>
+
+                <div class="asso-grid">
+                    <div class="asso-card">
+                        <div class="asso-card-header asso-bde">
+                            <h4>BDE EFREI</h4>
+                            <span class="asso-tag">Vie étudiante</span>
+                        </div>
+                        <p>Le Bureau des Étudiants organise les événements, les soirées, les week-ends d'intégration et les partenariats. L'âme du campus.</p>
+                    </div>
+                    <div class="asso-card">
+                        <div class="asso-card-header asso-tech">
+                            <h4>Club Dev &amp; Tech</h4>
+                            <span class="asso-tag">Coding</span>
+                        </div>
+                        <p>Workshops, sessions de code, présentations de nouveaux outils et langages. Pour ceux qui veulent aller plus loin que le programme.</p>
+                    </div>
+                    <div class="asso-card">
+                        <div class="asso-card-header asso-junior">
+                            <h4>SEP EFREI</h4>
+                            <span class="asso-tag">Junior Entreprise</span>
+                        </div>
+                        <p>Des projets réels pour des clients réels, gérés par des étudiants. La vraie vie du développeur, avant même d'être diplômé. L'association dédiée s'appelle <strong>SEP EFREI</strong>.</p>
+                        <a href="https://etudiant.sepefrei.fr" target="_blank" rel="noopener" class="asso-link">Découvrir SEP EFREI &rarr;</a>
+                    </div>
+                    <div class="asso-card">
+                        <div class="asso-card-header asso-inter">
+                            <h4>Pôle International</h4>
+                            <span class="asso-tag">International</span>
+                        </div>
+                        <p>Échanges avec des universités partenaires à l'étranger, accueil des étudiants internationaux et préparation au TOEIC.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LE PROJET TECHNIQUE -->
+            <section class="content-section">
+                <h3>Le Projet - Ce Site, C'est Nous</h3>
                 <p>
-                    Ce projet de suivi a été développé comme partie intégrante de notre cursus
-                    d'études en informatique à l'EFREI. Il démontre notre maîtrise des technologies
-                    web modernes et nos capacités en gestion de projet.
+                    Ce site a été conçu dans le cadre du projet TI402 - développement web from scratch,
+                    HTML5 sémantique, CSS3 custom, JavaScript vanilla. Pas de framework, pas de raccourci.
+                    Juste des compétences solides et un résultat dont on est fiers.
                 </p>
+                <div class="tech-tags">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript ES6+</span>
+                    <span class="tech-tag">Google Maps API</span>
+                    <span class="tech-tag">Formspree</span>
+                    <span class="tech-tag">Responsive Design</span>
+                    <span class="tech-tag">Git / GitHub</span>
+                </div>
             </section>
 
+            <!-- L'ÉQUIPE -->
             <section class="content-section">
-                <h3>Objectifs</h3>
-                <ul>
-                    <li>Mettre en place une structure web professionnelle et responsive</li>
-                    <li>Documenter le travail et les avancées du projet</li>
-                    <li>Présenter les compétences acquises en développement web</li>
-                    <li>Créer une plateforme d'information et de communication</li>
-                </ul>
+                <h3>L'Équipe du Projet</h3>
+                <div class="contact-profile">
+                    <img src="../images/evan.png" alt="Evan LEON" class="contact-photo">
+                    <div class="contact-info">
+                        <h4>Evan LEON</h4>
+                        <p><strong>Rôle :</strong> Développeur principal, conception, intégration HTML/CSS/JS et gestion du dépôt Git.</p>
+                        <p>Étudiant en informatique à l'EFREI depuis 2024. Passionné de développement web, de jeux vidéo et de projets qui ont de la gueule.</p>
+                        <p><em>"On n'est jamais aussi bons qu'après avoir planché sur un projet qui nous a résisté."</em></p>
+                        <ul class="contact-details">
+                            <li><span class="contact-icon">&#x2709;</span> <a href="mailto:evan.leon@efrei.fr">evan.leon@efrei.fr</a></li>
+                            <li><span class="contact-icon">&#x279C;</span> <a href="https://github.com/JeanChipo/Kingdom_Defender" target="_blank" rel="noopener">GitHub — Kingdom Defender</a></li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
-            <section class="content-section">
-                <h3>Spécifications Techniques</h3>
-                <p>
-                    Le site a été développé en respectant les standards web (HTML5, CSS3, JavaScript),
-                    avec un design responsive qui s'adapte à tous les appareils.
-                </p>
-                <ul>
-                    <li>Structure HTML sémantique</li>
-                    <li>Design responsive et moderne</li>
-                    <li>Navigation intuitive</li>
-                    <li>Performance optimisée</li>
-                </ul>
-            </section>
-
-            <section class="content-section">
-                <h3>L'EFREI</h3>
-                <p>
-                    L'EFREI (École Française d'Électronique et d'Informatique) est une grande école
-                    d'ingénieurs spécialisée en informatique et électronique, basée à Paris-Panthéon.
-                </p>
-            </section>
         </div>
     </main>
 
@@ -80,6 +255,10 @@
                 <ul>
                     <li><a href="../index.html">Accueil</a></li>
                     <li><a href="apropos.html">À Propos</a></li>
+                    <li><a href="cours.html">Cours &amp; Formations</a></li>
+                    <li><a href="equipe.html">Équipe</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
                 </ul>
             </nav>
             <p>&copy; 2026 Projet de Suivi EFREI. Tous droits réservés.</p>

@@ -3,22 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription - Projet de Suivi</title>
+    <title>Inscription - Département Informatique EFREI</title>
     <link rel="stylesheet" href="../styles.css">
+    <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
 <body>
+
+    <!-- ===== INTRO STAR WARS ===== -->
+    <div id="sw-intro" class="sw-intro">
+        <canvas id="sw-canvas" class="sw-canvas"></canvas>
+
+        <div id="sw-faraway" class="sw-faraway">
+            Il y a bien longtemps, dans une école bien lointaine...
+        </div>
+
+        <div id="sw-ship" class="sw-ship">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 70" width="220" height="70">
+                <ellipse cx="12" cy="35" rx="16" ry="7" fill="#ff6d00"/>
+                <ellipse cx="7" cy="35" rx="9" ry="4" fill="#ffeb3b"/>
+                <ellipse cx="115" cy="35" rx="95" ry="22" fill="#90a4ae"/>
+                <polygon points="55,35 28,8 85,18" fill="#607d8b"/>
+                <polygon points="55,35 28,62 85,52" fill="#607d8b"/>
+                <ellipse cx="28" cy="35" rx="10" ry="14" fill="#455a64" stroke="#263238" stroke-width="1.5"/>
+                <ellipse cx="158" cy="30" rx="22" ry="16" fill="#4fc3f7" opacity="0.85"/>
+                <ellipse cx="163" cy="27" rx="9" ry="6" fill="white" opacity="0.35"/>
+                <polygon points="210,35 172,24 172,46" fill="#ff9800"/>
+            </svg>
+        </div>
+
+        <div id="sw-scene" class="sw-crawl-scene">
+            <div class="sw-crawl">
+                <div class="sw-crawl-content">
+                    <p class="sw-episode-label">&#201;PISODE I</p>
+                    <h2 class="sw-crawl-title">L'INSCRIPTION SUP&#x00CA;ME</h2>
+                    <p>La galaxie num&#233;rique est en &#233;bullition. Une menace silencieuse plane sur les serveurs de l'univers : le manque d'ing&#233;nieurs qualifi&#233;s.</p>
+                    <p>Le D&#233;partement Informatique de l'EFREI, bastion de la r&#233;sistance technologique &#224; Villejuif, lance un appel solennel aux jeunes talents de la galaxie.</p>
+                    <p>Ceux qui oseront rejoindre ses rangs seront form&#233;s pendant 5 ans aux arts du code, de l'algorithme et du d&#233;bogage nocturne.</p>
+                    <p>Un vaisseau de recrutement a &#233;t&#233; d&#233;p&#234;ch&#233; pour t'apporter cette invitation. Si tu lis ces mots, c'est que tu es le padawan que nous cherchions.</p>
+                    <p>Compl&#232;te le formulaire ci-dessous. Que la Force du code soit avec toi.</p>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="skipIntro()" class="sw-skip">Passer &#8594;</button>
+    </div>
+
+    <!-- ===== PAGE NORMALE ===== -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>Projet de Suivi</h1>
+                <a href="../index.html">
+                    <img src="../images/logoefrei.png" alt="EFREI Logo" class="logo-img">
+                </a>
             </div>
             <nav class="nav-main">
                 <ul>
                     <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="apropos.html">À Propos</a></li>
-                    <li><a href="cours.html">Cours & Formations</a></li>
-                    <li><a href="equipe.html">Équipe</a></li>
+                    <li><a href="apropos.html">&#192; Propos</a></li>
+                    <li><a href="cours.html">Cours &amp; Formations</a></li>
+                    <li><a href="equipe.html">&#201;quipe</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="inscription.html" class="active">Inscription</a></li>
                 </ul>
@@ -29,69 +73,157 @@
     <main class="main-content">
         <div class="container">
             <section class="hero">
-                <h2>Créer un Compte</h2>
-                <p>Rejoignez notre communauté et accédez à tous nos services</p>
+                <h2>Rejoins l'Acad&#233;mie</h2>
+                <p>T&#233;l&#233;charge la brochure officielle du Programme Grande &#201;cole et re&#231;ois toutes les informations pour int&#233;grer le D&#233;partement Informatique de l'EFREI.</p>
+            </section>
+
+            <!-- BROCHURE PREVIEW -->
+            <section class="content-section brochure-preview-section">
+                <div class="brochure-preview-layout">
+                    <div class="brochure-info">
+                        <h3>Brochure Programme Grande &#201;cole</h3>
+                        <p>78 pages pour tout savoir sur la formation ing&#233;nieur EFREI : cursus, sp&#233;cialisations, vie &#233;tudiante, admissions et d&#233;bouch&#233;s.</p>
+                        <ul class="brochure-highlights">
+                            <li>13 sp&#233;cialisations (Majeures) au choix</li>
+                            <li>4 grandes fili&#232;res : S&#233;curit&#233; &amp; R&#233;seaux, Data Science, IT, Syst&#232;mes Embarqu&#233;s</li>
+                            <li>Cycle de 5 ans — Pr&#233;pa int&#233;gr&#233;e + &#201;cole Ing&#233;nieur</li>
+                            <li>67 partenariats de double dipl&#244;me &#224; l'international</li>
+                            <li>84% de satisfaction &#233;tudiante</li>
+                        </ul>
+                        <a href="../Brochure-PGE-EFREI.pdf" download class="download-button brochure-dl-btn">
+                            T&#233;l&#233;charger la brochure (PDF)
+                        </a>
+                    </div>
+                    <div class="brochure-cover">
+                        <div class="brochure-cover-card">
+                            <div class="brochure-cover-top">
+                                <img src="../images/logoefrei.png" alt="EFREI" class="brochure-logo">
+                            </div>
+                            <div class="brochure-cover-body">
+                                <p class="brochure-cover-label">PROGRAMME GRANDE &#201;COLE</p>
+                                <p class="brochure-cover-title">Brochure Officielle</p>
+                                <p class="brochure-cover-sub">Bac+5 — Dipl&#244;me d'Ing&#233;nieur CTI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class="content-section">
-                <h3>Formulaire d'Inscription</h3>
-                
-                <form class="inscription-form" method="POST" action="#">
+                <h3>Demande d'Information &amp; Inscription</h3>
+                <p style="color:#666; margin-bottom:25px;">
+                    Laisse-nous tes coordonn&#233;es pour &#234;tre contact&#233; par notre &#233;quipe admissions.
+                    En t'inscrivant, tu seras aussi averti en priorit&#233; lors de nos prochains &#233;v&#233;nements :
+                    <strong>Cybernight, hackathons, journ&#233;es portes ouvertes, comp&#233;titions eSport</strong> — pour ne rien rater de ce qui se passe &#224; l'EFREI.
+                </p>
+
+                <form class="inscription-form" id="inscription-form" method="POST" action="https://formspree.io/f/xaqvldge">
+                    <input type="hidden" name="_subject" value="Nouvelle demande d'inscription EFREI">
+
                     <div class="form-group">
-                        <label for="firstname">Prénom</label>
-                        <input type="text" id="firstname" name="firstname" required>
+                        <label for="firstname">Pr&#233;nom</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Ton pr&#233;nom" required>
                     </div>
 
                     <div class="form-group">
                         <label for="lastname">Nom</label>
-                        <input type="text" id="lastname" name="lastname" required>
+                        <input type="text" id="lastname" name="lastname" placeholder="Ton nom" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Adresse Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="ton.email@exemple.fr" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="password">Mot de passe</label>
-                        <input type="password" id="password" name="password" required>
+                        <label for="phone">T&#233;l&#233;phone (optionnel)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="06 00 00 00 00">
                     </div>
 
                     <div class="form-group">
-                        <label for="confirm_password">Confirmer le mot de passe</label>
-                        <input type="password" id="confirm_password" name="confirm_password" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Téléphone (optionnel)</label>
-                        <input type="tel" id="phone" name="phone">
+                        <label for="filiere">Fili&#232;re qui t'int&#233;resse</label>
+                        <select id="filiere" name="filiere">
+                            <option value="">-- Choisir une fili&#232;re --</option>
+                            <option value="securite-reseaux">S&#233;curit&#233; &amp; R&#233;seaux</option>
+                            <option value="data-science">Data Science &amp; IA</option>
+                            <option value="information-technology">Information Technology</option>
+                            <option value="systemes-embarques">Syst&#232;mes Embarqu&#233;s &amp; Robotique</option>
+                            <option value="pas-encore">Je ne sais pas encore</option>
+                        </select>
                     </div>
 
                     <div class="form-group checkbox">
                         <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">J'accepte les conditions d'utilisation</label>
+                        <label for="terms">J'accepte d'&#234;tre contact&#233; par l'&#233;quipe admissions EFREI</label>
                     </div>
 
-                    <button type="submit" class="download-button">S'inscrire</button>
+                    <button type="submit" class="download-button">Envoyer ma demande</button>
                 </form>
-
-                <p class="login-link">Vous avez déjà un compte ? <a href="connexion.html">Se connecter</a></p>
             </section>
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <nav class="nav-footer">
                 <ul>
                     <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="apropos.html">À Propos</a></li>
+                    <li><a href="apropos.html">&#192; Propos</a></li>
+                    <li><a href="cours.html">Cours &amp; Formations</a></li>
+                    <li><a href="equipe.html">&#201;quipe</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><a href="inscription.html">Inscription</a></li>
                 </ul>
             </nav>
-            <p>&copy; 2026 Projet de Suivi EFREI. Tous droits réservés.</p>
+            <p>&copy; 2026 Projet de Suivi EFREI. Tous droits r&#233;serv&#233;s.</p>
         </div>
     </footer>
+
+    <!-- BILLET SPATIAL -->
+    <div id="billet-modal" class="modal-overlay hidden">
+        <div class="billet-box">
+            <div class="billet-header">
+                <div>
+                    <div class="billet-airline">EFREI SPACE ACADEMY</div>
+                    <div class="billet-route">TERRE &#8594; VILLEJUIF — SECTEUR INFORMATIQUE</div>
+                </div>
+                <div class="billet-class">CLASSE ING&#201;NIEUR</div>
+            </div>
+            <div class="billet-body">
+                <div class="billet-field">
+                    <span class="billet-label">PASSAGER</span>
+                    <span id="billet-name" class="billet-value">--</span>
+                </div>
+                <div class="billet-field">
+                    <span class="billet-label">EMAIL</span>
+                    <span id="billet-email" class="billet-value billet-value-sm">--</span>
+                </div>
+                <div class="billet-row">
+                    <div class="billet-field">
+                        <span class="billet-label">DATE D'EMBARQUEMENT</span>
+                        <span id="billet-date" class="billet-value billet-value-sm">--</span>
+                    </div>
+                    <div class="billet-field">
+                        <span class="billet-label">N&#176; DE BILLET</span>
+                        <span id="billet-number" class="billet-value">--</span>
+                    </div>
+                </div>
+            </div>
+            <div class="billet-separator">
+                <span class="billet-cut">&#9997;</span>
+            </div>
+            <div class="billet-stub">
+                <p class="billet-stub-text">Bienvenue dans l'Arm&#233;e du Code, Padawan. Ta formation commence maintenant.</p>
+                <div class="billet-barcode"></div>
+                <a href="../Brochure-PGE-EFREI.pdf" download class="billet-dl-link">
+                    T&#233;l&#233;charger la brochure PGE &#8594;
+                </a>
+            </div>
+            <button onclick="closeBillet()" class="billet-close-btn">Fermer</button>
+        </div>
+    </div>
+
+    <div id="registration-toast" class="toast hide"></div>
+
 </body>
 </html>

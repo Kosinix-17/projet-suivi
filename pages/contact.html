@@ -1,13 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - EFREI Département Informatique</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script type="text/javascript" src="../script.js" defer></script>
 </head>
-<body>
-    <header>
 
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logoefrei.png" alt="EFREI Logo" class="logo-img">
+                </a>
+            </div>
+            <nav class="nav-main">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="apropos.html">À Propos</a></li>
+                    <li><a href="cours.html">Cours & Formations</a></li>
+                    <li><a href="equipe.html">Équipe</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <main class="main-content">
+        <div class="container">
+
+            <section class="hero">
+                <h2>Contactez-nous</h2>
+                <p>Une question sur nos formations ou le département ? Nous sommes là pour vous répondre.</p>
+            </section>
+
+            <section class="content-section">
+                <h3>Contact Principal</h3>
+                <div class="contact-profile">
+                    <img src="../images/evan.png" alt="Evan LEON" class="contact-photo">
+                    <div class="contact-info">
+                        <h4>Evan LEON</h4>
+                        <p>Étudiant — Département Informatique, EFREI Paris</p>
+                        <ul class="contact-details">
+                            <li>
+                                <span class="contact-icon"></span>
+                                <a href="mailto:evan.leon@efrei.fr">evan.leon@efrei.fr</a>
+                            </li>
+                            <li>
+                                <span class="contact-icon"></span>
+                                EFREI Paris — Campus de Villejuif
+                            </li>
+                            <li>
+                                <span class="contact-icon"></span>
+                                Métro Ligne 7 — Villejuif - Paul Vaillant-Couturier
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Calculer votre trajet jusqu'au campus</h3>
+                <p style="color:#666; margin-bottom:20px;">Entrez votre adresse pour connaître la distance et le temps de trajet jusqu'au campus EFREI de Villejuif.</p>
+                <div class="trajet-form">
+                    <input type="text" id="user-address" placeholder="Ex : 10 rue de Rivoli, Paris" />
+                    <div class="trajet-modes">
+                        <label><input type="radio" name="mode" value="DRIVING" checked> Voiture</label>
+                        <label><input type="radio" name="mode" value="TRANSIT"> Transports</label>
+                        <label><input type="radio" name="mode" value="WALKING"> Marche</label>
+                    </div>
+                    <button class="download-button" onclick="calculerTrajet()">Calculer le trajet</button>
+                </div>
+                <div id="trajet-result" class="trajet-result hidden">
+                    <div class="trajet-info">
+                        <div class="trajet-item">
+                            <span class="trajet-label">Distance</span>
+                            <span class="trajet-value" id="trajet-distance">—</span>
+                        </div>
+                        <div class="trajet-item">
+                            <span class="trajet-label">Temps de trajet</span>
+                            <span class="trajet-value" id="trajet-duree">—</span>
+                        </div>
+                        <div class="trajet-item">
+                            <span class="trajet-label">Destination</span>
+                            <span class="trajet-value">EFREI Paris, Villejuif</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="map" class="map-container"></div>
+            </section>
+
+            <section class="content-section">
+                <h3>Envoyer un Message</h3>
+                <form class="contact-form" id="contact-form" action="https://formspree.io/f/xaqvldge" method="POST">
+                    <div class="form-group">
+                        <label for="contact-name">Nom complet</label>
+                        <input type="text" id="contact-name" name="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Adresse e-mail</label>
+                        <input type="email" id="contact-email" name="email" placeholder="votre@email.fr" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Sujet</label>
+                        <select id="contact-subject" name="subject">
+                            <option value="">-- Choisissez un sujet --</option>
+                            <option value="formations">Informations sur les formations</option>
+                            <option value="admission">Procédure d'admission</option>
+                            <option value="stage">Stages & Alternance</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" rows="6" placeholder="Votre message..." required></textarea>
+                    </div>
+                    <button type="submit" class="download-button">Envoyer le message</button>
+                </form>
+            </section>
+
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav-footer">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="apropos.html">À Propos</a></li>
+                    <li><a href="cours.html">Cours & Formations</a></li>
+                    <li><a href="equipe.html">Équipe</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2026 Département Informatique EFREI. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        function initMap() {
+            const efrei = { lat: 48.7947, lng: 2.3671 };
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: efrei
+            });
+            new google.maps.Marker({
+                position: efrei,
+                map: map,
+                title: 'EFREI Paris — Campus de Villejuif'
+            });
+            window._map = map;
+        }
+
+        function calculerTrajet() {
+            const adresse = document.getElementById('user-address').value.trim();
+            if (!adresse) { alert('Veuillez entrer votre adresse.'); return; }
+
+            const mode = document.querySelector('input[name="mode"]:checked').value;
+            const destination = 'EFREI Paris, 30-32 Avenue de la République, 94800 Villejuif';
+            const service = new google.maps.DistanceMatrixService();
+
+            service.getDistanceMatrix({
+                origins: [adresse],
+                destinations: [destination],
+                travelMode: google.maps.TravelMode[mode],
+                language: 'fr'
+            }, function(response, status) {
+                if (status === 'OK') {
+                    const element = response.rows[0].elements[0];
+                    if (element.status === 'OK') {
+                        document.getElementById('trajet-distance').textContent = element.distance.text;
+                        document.getElementById('trajet-duree').textContent = element.duration.text;
+                        document.getElementById('trajet-result').classList.remove('hidden');
+
+                        const directionsService = new google.maps.DirectionsService();
+                        const directionsRenderer = new google.maps.DirectionsRenderer();
+                        directionsRenderer.setMap(window._map);
+                        directionsService.route({
+                            origin: adresse,
+                            destination: destination,
+                            travelMode: google.maps.TravelMode[mode]
+                        }, function(result, status) {
+                            if (status === 'OK') directionsRenderer.setDirections(result);
+                        });
+                    } else {
+                        alert('Adresse introuvable. Vérifiez votre saisie.');
+                    }
+                } else {
+                    alert('Erreur lors du calcul. Vérifiez votre connexion.');
+                }
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAbQfdesk-bYvO4XGY2ucvBLxxJi61NUI&callback=initMap" async defer></script>
+
+    <div id="registration-toast" class="toast hide"></div>
+
+    <div id="success-modal" class="modal-overlay hidden">
+        <div class="modal-box">
+            <div class="modal-icon">&#10003;</div>
+            <h3>Message envoyé !</h3>
+            <p>Merci pour votre message. Nous vous répondrons dans les plus brefs délais.</p>
+            <button class="modal-close" onclick="closeModal()">Fermer</button>
+        </div>
+    </div>
 </body>
 </html>
