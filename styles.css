@@ -439,17 +439,16 @@ body {
 
 .game-description li {
     padding: 8px 0;
-    padding-left: 25px;
+    padding-left: 20px;
     position: relative;
     color: #666;
 }
 
 .game-description li:before {
-    content: "✓";
+    content: "–";
     position: absolute;
     left: 0;
-    color: var(--secondary-color);
-    font-weight: bold;
+    color: #666;
 }
 
 .game-gallery {
@@ -1891,7 +1890,7 @@ form button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #4fc3f7;
-    font-size: clamp(14px, 2vw, 20px);
+    font-size: clamp(22px, 3.5vw, 38px);
     font-style: italic;
     letter-spacing: 2px;
     text-align: center;
@@ -1957,7 +1956,7 @@ form button:hover {
 .sw-crawl-content {
     color: #f5c518;
     font-family: 'Times New Roman', Times, serif;
-    font-size: clamp(13px, 1.8vw, 18px);
+    font-size: clamp(18px, 2.8vw, 32px);
     text-align: justify;
     padding: 30px 20px 200px;
     line-height: 1.9;
@@ -1971,15 +1970,15 @@ form button:hover {
 
 .sw-episode-label {
     text-align: center !important;
-    font-size: 14px;
-    letter-spacing: 4px;
+    font-size: 22px;
+    letter-spacing: 6px;
     margin-bottom: 18px !important;
     opacity: 0.8;
 }
 
 .sw-crawl-title {
     text-align: center;
-    font-size: clamp(20px, 3vw, 30px);
+    font-size: clamp(34px, 5.5vw, 58px);
     letter-spacing: 3px;
     margin-bottom: 35px;
     color: #f5c518;
